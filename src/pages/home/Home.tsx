@@ -43,8 +43,8 @@ const useScrollGradient = (
 };
 
 export const Home = () => {
-  const startColor = [91, 173, 255] as [number, number, number];
-  const endColor = [10, 80, 80] as [number, number, number];
+  const startColor = [175, 211, 234] as [number, number, number];
+  const endColor = [27, 79, 131] as [number, number, number];
 
   const backgroundColor = useScrollGradient(startColor, endColor);
   return (
