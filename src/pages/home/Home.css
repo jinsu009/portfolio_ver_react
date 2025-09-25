@@ -1,4 +1,6 @@
 .home_div {
-  height: 100000px;
-  background-color: lightblue;
+  /* height: 100000px; */
+  /* background-color: lightblue; */
+  transition: background-color 0.2s ease-out;
+  min-height: 300vh;
 }
