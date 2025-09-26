@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./Home.css";
 import { start } from "repl";
+import { Info } from "../info/Info";
 
 const useScrollGradient = (
   startColor: [number, number, number],
@@ -54,7 +55,7 @@ export const Home = () => {
         backgroundColor,
       }}
     >
-      Home
+      <Info />
     </div>
   );
 };
