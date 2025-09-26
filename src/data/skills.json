@@ -6,16 +6,44 @@
     "state_management": ["Recoil", "Redux"],
     "ui_framework_and_library": [
       "Ant Design",
-      "AntV Chart",
+      "Thymeleaf",
       "Bootstrap",
       "CoreUI",
       "Chart.js",
-      "Thymeleaf",
-      "style-component"
+      "jQuery",
+      "Ajax",
+      "JSP"
     ],
     "version_control": ["SVN", "Git", "Gerrit"],
     "build_and_ci_cd": ["Jenkins"],
     "testing": ["Jest"],
     "tools": ["VSCode", "Eclipse"]
+  },
+  {
+    "Proficient": [
+      "React",
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "VSCode",
+      "Eclipse"
+    ],
+    "Intermediate": [
+      "Ant Design",
+      "Thymeleaf",
+      "Bootstrap",
+      "CoreUI",
+      "Chart.js",
+      "Java",
+      "Spring Framework",
+      "SQL",
+      "Oracle",
+      "MySQL",
+      "Git",
+      "Jest",
+      "Figma"
+    ],
+    "Beginner": ["SVN", "Gerrit", "Jenkins"]
   }
 ]
