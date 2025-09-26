@@ -1,0 +1,21 @@
+[
+  {
+    "frontend": ["React", "JavaScript", "TypeScript", "HTML", "CSS", "Figma"],
+    "backend": ["Java", "Spring Framework"],
+    "database": ["SQL", "Oracle", "MySQL"],
+    "state_management": ["Recoil", "Redux"],
+    "ui_framework_and_library": [
+      "Ant Design",
+      "AntV Chart",
+      "Bootstrap",
+      "CoreUI",
+      "Chart.js",
+      "Thymeleaf",
+      "style-component"
+    ],
+    "version_control": ["SVN", "Git", "Gerrit"],
+    "build_and_ci_cd": ["Jenkins"],
+    "testing": ["Jest"],
+    "tools": ["VSCode", "Eclipse"]
+  }
+]
