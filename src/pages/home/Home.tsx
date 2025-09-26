@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "./Home.css";
 import { start } from "repl";
 import { Info } from "../info/Info";
+import { Skills } from "../skills/Skills";
 
 const useScrollGradient = (
   startColor: [number, number, number],
@@ -55,7 +56,18 @@ export const Home = () => {
         backgroundColor,
       }}
     >
-      <Info />
+      <div className="intro_wrapper">
+        <p className="intro_comment">
+          협업을 통해 기술적 시너지를 창출하는 풀스택 지향 개발자
+        </p>
+      </div>
+      <div className="info_wrapper">
+        <Info />
+      </div>
+      <div className="skills_wrapper">
+        <Skills />
+      </div>
+      <div className="career_wrapper">회사와 프로젝트를 어떻게 적을까.</div>
     </div>
   );
 };
