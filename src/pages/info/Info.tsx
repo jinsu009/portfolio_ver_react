@@ -18,7 +18,7 @@ export const Info = () => {
               <div className="item_header">
                 <span className="item_name">Name</span>
               </div>
-              <div className="name_content content">
+              <div className="name_content ">
                 <div className="name_ko">{info_data.name}</div>
                 &nbsp;(<div className="name_eng">{info_data.eng_name}</div>)
               </div>
@@ -28,27 +28,27 @@ export const Info = () => {
               <div className="item_header">
                 <span className="item_name">Birth</span>
               </div>
-              <div className="name_content content">{info_data.birth}</div>
+              <div className="name_content ">{info_data.birth}</div>
             </div>
 
             <div className="item_container">
               <div className="item_header">
                 <span className="item_name">Phone</span>
               </div>
-              <div className="name_content content">{info_data.phone}</div>
+              <div className="name_content ">{info_data.phone}</div>
             </div>
 
             <div className="item_container">
               <div className="item_header">
                 <span className="item_name">Mail</span>
               </div>
-              <div className="name_content content">{info_data.email}</div>
+              <div className="name_content ">{info_data.email}</div>
             </div>
             <div className="item_container">
               <div className="item_header">
                 <span className="item_name">Git</span>
               </div>
-              <div className="name_content content">{info_data.github}</div>
+              <div className="name_content">{info_data.github}</div>
             </div>
           </div>
           <div className="image_content"></div>
@@ -56,7 +56,7 @@ export const Info = () => {
       </div>
 
       {/* --- Career --- */}
-      <div className="certifications_info section_group">
+      <div className="career_info section_group">
         <div className="section_title">Career</div>
         {certifications.map((cert, index) => (
           <div className="item_container cert_item" key={index}>

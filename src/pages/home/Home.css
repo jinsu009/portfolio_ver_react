@@ -20,7 +20,8 @@
   color: darkblue;
 }
 
-.info_wrapper {
+.info_wrapper,
+.skills_wrapper {
   display: flex;
   flex-direction: column;
 }

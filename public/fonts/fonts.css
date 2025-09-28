@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "SUSE_Mono";
+  /* public 폴더 내의 CSS에서는 절대 경로 (/) 사용 가능 */
+  src: url("/fonts/SUSE_Mono/SUSEMono-VariableFont_wght.woff2") format("woff2");
+  font-weight: 100 1000;
+}
