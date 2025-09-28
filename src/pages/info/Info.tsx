@@ -1,6 +1,7 @@
 import React, { use, useEffect } from "react";
 import my_info from "../../data/my_info.json";
 import "./Info.css";
+import AboutInfo from "../../components/AboutInfo";
 
 const info_data = my_info[0];
 
@@ -13,43 +14,14 @@ export const Info = () => {
         <div className="section_title">About Me</div>
         <div className="section_content">
           <div className="content">
-            {/* 기존 기본 정보 섹션 */}
-            <div className="item_container">
-              <div className="item_header">
-                <span className="item_name">Name</span>
-              </div>
-              <div className="name_content ">
-                <div className="name_ko">{info_data.name}</div>
-                &nbsp;(<div className="name_eng">{info_data.eng_name}</div>)
-              </div>
-            </div>
-
-            <div className="item_container">
-              <div className="item_header">
-                <span className="item_name">Birth</span>
-              </div>
-              <div className="name_content ">{info_data.birth}</div>
-            </div>
-
-            <div className="item_container">
-              <div className="item_header">
-                <span className="item_name">Phone</span>
-              </div>
-              <div className="name_content ">{info_data.phone}</div>
-            </div>
-
-            <div className="item_container">
-              <div className="item_header">
-                <span className="item_name">Mail</span>
-              </div>
-              <div className="name_content ">{info_data.email}</div>
-            </div>
-            <div className="item_container">
-              <div className="item_header">
-                <span className="item_name">Git</span>
-              </div>
-              <div className="name_content">{info_data.github}</div>
-            </div>
+            <AboutInfo
+              item="Name"
+              nameInfo={[info_data.name, info_data.eng_name]}
+            />
+            <AboutInfo item="Birth" other={info_data.birth} />
+            <AboutInfo item="Phone" other={info_data.phone} />
+            <AboutInfo item="Mail" other={info_data.email} />
+            <AboutInfo item="Git" other={info_data.github} />
           </div>
           <div className="image_content"></div>
         </div>
