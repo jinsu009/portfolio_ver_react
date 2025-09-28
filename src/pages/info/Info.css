@@ -1,0 +1,157 @@
+.basic_info {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+  border: none;
+}
+.section_content {
+  display: flex;
+  flex-direction: row;
+}
+.content {
+  width: 50%;
+}
+.image_content {
+  width: 50%;
+}
+
+.name_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.info_wrapper {
+  /* 모든 info wrapper가 동일한 너비를 갖도록 설정 */
+  /*  flex-basis: 0;  */ /* 기본 크기를 0으로 설정 */
+  /* flex-grow: 1; */ /* 남은 공간을 균등하게 차지 */
+
+  /* 한 줄에 2개만 나오도록 너비를 50%로 고정 */
+  flex-basis: 50%;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  display: flex;
+
+  /* 자격증/학력의 .item_container 스타일처럼 보이기 위해 테두리 제거 및 패딩 조정 */
+  border-bottom: none;
+  border-right: none;
+  padding: 10px 0; /* 상하 패딩을 균일하게 설정 */
+  margin-bottom: 15px;
+  margin: 0px 20px; /* 오른쪽 여백 제거 */
+
+  /* 왼쪽 세로줄(포인트 스타일)을 item_container와 동일하게 적용 */
+
+  padding-left: 0px; /* 세로줄과의 간격 확보 */
+}
+
+.basic_up .info_wrapper:nth-child(even),
+.basic_down .info_wrapper:nth-child(even) {
+  border-right: none;
+}
+
+.title {
+  /*  flex-shrink: 0; 너비 값 (100px) 고정*/
+  /* width: 100px;
+ 
+  border-right: 1px solid black;
+  padding: 8px 10px;
+  font-weight: bold;
+  background-color: #f7f7f7; */
+
+  /* 고정 너비 100px은 유지하여 왼쪽 정렬을 깔끔하게 합니다. */
+  width: 100px;
+  flex-shrink: 0;
+  font-weight: bold;
+  color: #333;
+  padding: 0; /* 패딩 제거 (info_wrapper가 이미 패딩을 가짐) */
+  margin-right: 15px; /* content와의 간격 확보 */
+  background-color: transparent;
+  border-right: none;
+  text-align: left; /* 왼쪽 정렬로 content와 간격을 벌립니다. */
+}
+
+.content {
+  width: 150px;
+  flex-grow: 1; /* 남은 공간 모두 사용 */
+  padding: 0px;
+}
+
+/* --- 2. 자격증/학력 섹션 공통 스타일 --- */
+
+/* 섹션 그룹 전체 여백 */
+.section_group {
+  margin-top: 30px;
+}
+
+/* 섹션 제목 스타일 통일 */
+.section_title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #333;
+}
+
+/* 개별 항목 컨테이너 스타일 통일 */
+.item_container {
+  margin-bottom: 15px;
+  padding: 10px 0;
+  border-left: 3px solid #007bff;
+  padding-left: 15px;
+}
+
+/* 항목의 제목/학교명/자격증명과 기간 */
+.item_header {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+}
+
+.item_period {
+  font-weight: normal;
+  font-size: 15px;
+  color: #666;
+}
+
+/* 항목의 세부 정보 */
+.item_detail {
+  font-size: 15px;
+  margin-top: 5px;
+  color: #333;
+}
+
+/* 섹션 제목 Wrapper: 두 제목을 나란히 배치 */
+.cert_edu_title_wrapper {
+  display: flex;
+  justify-content: space-between; /* 제목 사이에 공간 확보 */
+  margin-top: 50px; /* 상단 여백 조정 */
+  margin-bottom: 15px;
+  border-bottom: 2px solid #333; /* 아래 구분선 */
+  padding-bottom: 5px;
+  width: 100%; /* 너비 확보 */
+}
+
+/* 개별 항목 컨테이너의 위치 정렬 */
+.item_container {
+  /* 기존 스타일 유지 */
+  /*  border-left: 3px solid #007bff;
+  padding-left: 15px;
+  margin-bottom: 15px; */
+}
+
+/* 자격증/학력 항목을 나란히 배치 (스크린샷 레이아웃 재현) */
+/* 이 부분은 HTML에서 전체 자격증 리스트와 학력 리스트를 감싸는 래퍼가 필요합니다. */
+.cert_edu_content_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.certifications_info {
+  flex-basis: 50%; /* 자격증 영역이 전체의 50% 차지 */
+}
+
+.education_info {
+  flex-basis: 50%; /* 학력 영역이 전체의 50% 차지 */
+}
