@@ -7,7 +7,7 @@ import skill_info from "../../data/skills.json";
 export const Skills = () => {
   const skills = skill_info[1];
   return (
-    <div className="skills_info section_group">
+    <div className="about_info section_group">
       <div className="section_title">Skills</div>
       <div className="proficient">
         <SkillGroups title="Proficient" skills={skills.Proficient} />

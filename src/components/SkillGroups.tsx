@@ -6,7 +6,6 @@ type SkillGroupsProps = {
 };
 
 const SkillGroups = (props: SkillGroupsProps) => {
-  console.log(props.skills);
   return (
     <div>
       <div className="skill_container">

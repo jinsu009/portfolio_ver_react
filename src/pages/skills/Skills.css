@@ -1,13 +1,16 @@
 .skill_container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 15px;
+  padding: 10px 0;
+  border-left: 3px solid #007bff;
+  padding-left: 15px;
 }
 
 .item_title {
   font-size: 20px;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .items {
@@ -15,6 +18,10 @@
   flex-direction: row;
   justify-content: start;
   align-items: center;
+  /* ✨ 자동 줄바꿈 추가: 공간이 부족하면 다음 줄로 넘김 */
+  flex-wrap: wrap;
+  /* ✨ 항목들이 줄바꿈 될 경우 위아래 간격 추가 (선택 사항) */
+  gap: 8px 0; /* flex-wrap 사용 시, row-gap을 8px로 설정 */
 }
 
 .item {
@@ -24,17 +31,22 @@
   border: 1px solid black;
   border-radius: 3px;
   padding: 5px;
-  margin: 0 5px;
+
   min-width: 50px;
-  height: 15px;
+  /*height: 15px;*/
+  /* 높이를 auto로 변경하여 텍스트 길이에 따라 유연하게 만듭니다. */
+  height: auto;
+
   display: flex;
   justify-content: center;
   align-items: center;
   color: #000;
-  background-color: #fff;
-}
+  background-color: #fff; /* min-width와 height는 내용에 따라 유동적으로 조절하는 것이 좋지만, 기존 값을 유지 */
+  min-width: 50px;
 
-
-.skills_info {
-  flex-basis: 50%; /* 학력 영역이 전체의 50% 차지 */
+  /* ✨ 오른쪽 간격 및 항목 간의 상하 간격 추가 */
+  /* items에 flex-wrap과 gap을 사용하여 항목 간 간격을 더 효율적으로 관리할 수 있습니다. */
+  /* 하지만 items의 flex-wrap 속성이 없는 구형 브라우저를 위해 item에 margin-right와 margin-bottom을 추가합니다. */
+  margin-right: 8px; /* 오른쪽 간격 8px */
+  margin-bottom: 8px; /* 아래쪽 간격 8px (줄바꿈 시 다음 줄과의 간격 확보) */
 }
