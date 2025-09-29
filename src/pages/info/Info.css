@@ -74,14 +74,6 @@
   width: 100%; /* 너비 확보 */
 }
 
-/* 개별 항목 컨테이너의 위치 정렬 */
-.item_container {
-  /* 기존 스타일 유지 */
-  /*  border-left: 3px solid #007bff;
-  padding-left: 15px;
-  margin-bottom: 15px; */
-}
-
 /* 자격증/학력 항목을 나란히 배치 (스크린샷 레이아웃 재현) */
 /* 이 부분은 HTML에서 전체 자격증 리스트와 학력 리스트를 감싸는 래퍼가 필요합니다. */
 .cert_edu_content_wrapper {
@@ -89,14 +81,6 @@
   justify-content: space-between;
 }
 
-.career_info {
+.about_info {
   flex-basis: 50%; /* 커리어 영역이 전체의 50% 차지 */
-}
-
-.certifications_info {
-  flex-basis: 50%; /* 자격증 영역이 전체의 50% 차지 */
-}
-
-.education_info {
-  flex-basis: 50%; /* 학력 영역이 전체의 50% 차지 */
 }
