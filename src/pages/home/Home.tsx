@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./Home.css";
-import { start } from "repl";
 import { Info } from "../info/Info";
 import { Skills } from "../skills/Skills";
+import ProjectList from "../projects/ProjectList";
 
 const useScrollGradient = (
   startColor: [number, number, number],
@@ -67,7 +67,9 @@ export const Home = () => {
       <div className="skills_wrapper">
         <Skills />
       </div>
-      <div className="career_wrapper">회사와 프로젝트를 어떻게 적을까.</div>
+      <div className="project_wrapper">
+        <ProjectList />
+      </div>
     </div>
   );
 };
