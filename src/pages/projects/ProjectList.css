@@ -4,6 +4,24 @@
   margin-top: 50px;
   border-radius: 5px;
   background-color: beige;
+
+  /* 고정된 너비와 높이를 유지 */
+  flex-shrink: 0;
+
+  /* 중앙 정렬을 위해 margin을 auto로 변경 */
+  margin: 10px auto;
+}
+
+/* 추가: 프로젝트 리스트를 감싸는 뷰포트 컨테이너가 필요합니다. */
+.project_viewport {
+  width: auto;
+  overflow: hidden; /* 이 컨테이너를 벗어나는 내용은 숨깁니다. */
+  position: relative; /* 버튼의 absolute 위치 기준이 됩니다. */
+  margin: 0 auto; /* 중앙 정렬 (선택 사항) */
+  /* Flexbox를 사용하여 내부 요소 (버튼, project_list) 정렬을 제어 */
+  display: flex;
+  justify-content: space-between; /* 버튼을 양 끝에, 리스트를 가운데에 배치하기 위한 기본 틀 */
+  align-items: center; /* 세로 중앙 정렬 */
 }
 
 .project_header {
@@ -14,9 +32,42 @@
   padding: 3px 0;
   height: 20%;
 }
+
 .project_body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80%;
+}
+.project_list {
+  /* project_viewport 내부에서 중앙에 위치하도록 함 */
+  /* project_viewport에 flexbox를 적용했으므로, 리스트가 남은 공간을 채우지 않도록 합니다. */
+  flex-grow: 0;
+}
+
+.carousel_buttons {
+  /* 바다색에 어울리는 파란색 계열 배경 */
+  background: #3498db; /* 밝은 파란색 (바다색 계열) */
+  color: #fff; /* 화살표 (글자색) 흰색 */
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%; /* 원형 모양 */
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative; /* flexbox의 영향을 받도록 relative로 변경 */
+  z-index: 10;
+  top: auto;
+  transform: none;
+}
+
+.prev,
+.next {
+  margin: 0 10px; /* project_list와의 간격 조정 (선택 사항) */
 }
