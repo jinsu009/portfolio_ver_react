@@ -9,7 +9,7 @@ const SkillGroups = (props: SkillGroupsProps) => {
   return (
     <div>
       <div className="skill_container">
-        <div className="item_title">{props.title}</div>
+        <div className="item_title skill_title">{props.title}</div>
         <div className="items">
           {props.skills?.map((skill, index) => (
             <div className="item" key={index}>

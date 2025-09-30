@@ -1,6 +1,6 @@
 .project_container {
-  width: 400px;
-  height: 400px;
+  width: 1200px;
+  height: 600px;
   margin-top: 50px;
   border-radius: 5px;
   background-color: beige;
@@ -70,4 +70,36 @@
 .prev,
 .next {
   margin: 0 10px; /* project_list와의 간격 조정 (선택 사항) */
+}
+
+.project_list_table {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px;
+  height: 90%;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.project_list_table > tr > th {
+  width: 100px;
+  font-weight: bold;
+}
+
+.project_list_table td {
+  width: auto;
+  word-wrap: break-word;
+}
+
+/* 각 항목을 태그 모양으로 꾸미고 싶다면 */
+.tech-item,
+.tool-item {
+  /* 인라인 블록으로 설정하면 패딩이나 마진을 줄 수 있습니다. */
+  display: inline-block;
+  /* 태그 간 약간의 간격 */
+  margin: 2px 5px 2px 0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background-color: #e0f7fa;
+  font-size: 0.9em;
 }
