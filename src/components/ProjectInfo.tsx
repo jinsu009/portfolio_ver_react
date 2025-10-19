@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 
-const renderTags = (tags: string[]) => {
-  return tags.map((tag, index) => (
+const renderTags = (info: any[]) => {
+  // tags가 undefined 또는 null이면 빈 배열([])을 사용하여 안전하게 map 호출
+  const safeTags = info || [];
+
+  return safeTags.map((tag, index) => (
     <span key={index} className="tech-item">
       {tag}
     </span>
@@ -16,7 +19,7 @@ const ProjectInfo = (props: { projectList: any; currentProject: number }) => {
 
   return (
     <div className="project_container">
-      <div className="project_header">{project.title}</div>
+      <div className="project_header">{project.project_name}</div>
       <div className="project_body">
         {/* 1. 핵심 정보 카드 섹션: 기간, 기술, 도구 */}
         <div className="card_info_section">
@@ -29,13 +32,13 @@ const ProjectInfo = (props: { projectList: any; currentProject: number }) => {
           {/* 사용 기술 정보 */}
           <div className="info_card_item">
             <h4>사용 기술 (Tech Stack)</h4>
-            {/* <p>{renderTags(project.tech_stack)}</p> */}
+            <p>{renderTags(project.stack)}</p>
           </div>
 
           {/* 도구 정보 */}
           <div className="info_card_item">
             <h4>도구 (Tools)</h4>
-           {/*  <p>{renderTags(project.tools)}</p> */}
+            <p>{renderTags(project.tools)}</p>
           </div>
         </div>
 
@@ -57,7 +60,7 @@ const ProjectInfo = (props: { projectList: any; currentProject: number }) => {
         </div>
 
         {/* 4. 링크 버튼 섹션 (선택 사항) */}
-         {/*{project.github_link && (
+        {/*{project.github_link && (
           <div className="project_links">
             <a
               href={project.github_link}
