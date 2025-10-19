@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 
-
 // 경력 고유 속성: 실제 전달되는 career 배열의 요소와 일치해야 합니다.
 type CareerItem = {
   company: string;
@@ -44,7 +43,7 @@ const AboutInfo = (props: AboutInfoProps) => {
 
   return (
     <div>
-      <div className="about_info section_group">
+      <div className="about_info ">
         <div className="section_title">{sectionTitle}</div>
 
         {/* 맵핑: itemsToRender는 항상 배열이므로 안전하게 .map 사용 가능 */}

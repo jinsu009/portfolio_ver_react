@@ -4,16 +4,18 @@ import "./Info.css";
 import PersonalInfo from "../../components/PersonalInfo";
 import EducationInfo from "../../components/EducationInfo";
 import AboutInfo from "../../components/AboutInfo";
+import SectionTitle from "../../components/SectionTitle";
+import { ProjectListProps } from "../../components/types";
 
 const info_data = my_info[0];
 
-export const Info = () => {
+export const Info = ({ fontColor } : ProjectListProps) => {
   const { career, education, certifications } = info_data;
 
   return (
     <>
       <div className="basic_info">
-        <div className="section_title">About Me</div>
+        <SectionTitle title="About Me" fontColor={fontColor} />
         <div className="section_content">
           <div className="content">
             <PersonalInfo

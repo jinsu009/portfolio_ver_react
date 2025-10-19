@@ -2,8 +2,10 @@ import React, { useEffect } from "react";
 import "./ProjectList.css";
 import project_info from "../../data/my_info.json";
 import ProjectInfo from "../../components/ProjectInfo";
+import SectionTitle from "../../components/SectionTitle";
+import {ProjectListProps} from "../../components/types";
 
-const ProjectList = () => {
+const ProjectList = ({ fontColor } : ProjectListProps) => {
   // 1. 현재 보여줄 슬라이드의 인덱스를 관리
   const [currentIndex, setCurrentIndex] = React.useState(0);
 
@@ -42,7 +44,8 @@ const ProjectList = () => {
   }, []);
 
   return (
-    <>
+    <div className="about_info">
+      <SectionTitle title="Projects" fontColor={fontColor} />
       <div className="project_viewport">
         <button className="carousel_buttons prev" onClick={handlePrev}>
           &#10094;
@@ -57,7 +60,7 @@ const ProjectList = () => {
           &#10095;
         </button>
       </div>
-    </>
+    </div>
   );
 };
 

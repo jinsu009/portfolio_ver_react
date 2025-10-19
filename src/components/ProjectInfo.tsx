@@ -1,92 +1,77 @@
 import React, { useEffect } from "react";
 
+const renderTags = (tags: string[]) => {
+  return tags.map((tag, index) => (
+    <span key={index} className="tech-item">
+      {tag}
+    </span>
+  ));
+};
+
 const ProjectInfo = (props: { projectList: any; currentProject: number }) => {
-  return props?.projectList && props?.projectList.length > 0 ? (
-    <div className="project_container" key={props.currentProject}>
-      <div className="project_header">
-        {props.projectList[props.currentProject]?.project_name}
-      </div>
+  const project = props?.projectList[props?.currentProject];
+
+  if (!project) return null;
+  const hypen = "";
+
+  return (
+    <div className="project_container">
+      <div className="project_header">{project.title}</div>
       <div className="project_body">
-        <table className="project_list_table">
-          <tr>
-            <th>기간</th>
-            <td>{props.projectList[props.currentProject]?.period}</td>
-          </tr>
-          <tr>
-            <th>사용기술</th>
-            <td>
-              {props.projectList[props.currentProject]?.stack?.map(
-                (data: any, idx: number) => (
-                  <span
-                    key={idx}
-                    //className="tech-item"
-                  >
-                    {data}
-                    {idx <
-                      props.projectList[props.currentProject].stack.length -
-                        1 && ", "}
-                  </span>
-                )
-              )}
-            </td>
-          </tr>
-          <tr>
-            <th>도구</th>
-            <td>
-              {props.projectList[props.currentProject]?.tools?.map(
-                (data: any, idx: number) => (
-                  <span
-                    key={idx}
-                    //className="tool-item"
-                  >
-                    {data}
-                    {idx <
-                      props.projectList[props.currentProject].tools.length -
-                        1 && ", "}
-                  </span>
-                )
-              )}
-            </td>
-          </tr>
-          <tr>
-            <th>역할</th>
-            <td>
-              {typeof props.projectList[props.currentProject]?.position ===
-                "object" &&
-              props.projectList[props.currentProject]?.position.length > 1
-                ? props.projectList[props.currentProject]?.position?.map(
-                    (data: any, idx: number) => <div key={idx}>{data}</div>
-                  )
-                : props.projectList[props.currentProject]?.position}
-            </td>
-          </tr>
-          <tr>
-            <th>내용</th>
-            <td>
-              {props.projectList[props.currentProject]?.work_history?.map(
-                (data: any, idx: number) => (
-                  <div key={idx}>{data}</div>
-                )
-              )}
-            </td>
-          </tr>
-          <tr>
-            <th>소감</th>
-            <td>{props.projectList[props.currentProject]?.result}</td>
-          </tr>
-        </table>
+        {/* 1. 핵심 정보 카드 섹션: 기간, 기술, 도구 */}
+        <div className="card_info_section">
+          {/* 기간 정보 */}
+          <div className="info_card_item">
+            <h4>기간 (Duration)</h4>
+            <p>{project.period}</p>
+          </div>
+
+          {/* 사용 기술 정보 */}
+          <div className="info_card_item">
+            <h4>사용 기술 (Tech Stack)</h4>
+            {/* <p>{renderTags(project.tech_stack)}</p> */}
+          </div>
+
+          {/* 도구 정보 */}
+          <div className="info_card_item">
+            <h4>도구 (Tools)</h4>
+           {/*  <p>{renderTags(project.tools)}</p> */}
+          </div>
+        </div>
+
+        {/* 2. 상세 정보 섹션: 역할 */}
+        <div className="card_detail_section">
+          <h3 className="detail_header">주요 역할 (Role)</h3>
+          <div className="detail_content">
+            {/* 역할이 여러 줄일 경우 배열로 처리하거나, <br/> 태그 등을 사용할 수 있습니다. */}
+            <p>{project.role_description}</p>
+          </div>
+        </div>
+
+        {/* 3. 상세 정보 섹션: 내용/소감 */}
+        <div className="card_detail_section">
+          <h3 className="detail_header">내용 및 소감 (Summary & Reflection)</h3>
+          <div className="detail_content">
+            <p>{project.description}</p>
+          </div>
+        </div>
+
+        {/* 4. 링크 버튼 섹션 (선택 사항) */}
+         {/*{project.github_link && (
+          <div className="project_links">
+            <a
+              href={project.github_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link_button"
+            >
+              GitHub 바로가기
+            </a>
+          </div>
+        )} */}
       </div>
     </div>
-  ) : null;
-
-  /*  <div className="project_container" key={props.currentProject}>
-      <div className="project_header">
-       
-      </div>
-      <div className="porject_body">
-        Project {props.currentProject + 1} body
-      </div>
-    </div> */
+  );
 };
 
 export default ProjectInfo;

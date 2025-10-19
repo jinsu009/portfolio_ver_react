@@ -5,7 +5,7 @@ const EducationInfo = (props: { information: any }) => {
     /* --- 학력 정보 섹션: 별도 섹션으로 유지 --- */
   }
   return (
-    <div className="about_info section_group">
+    <div className="about_info">
       <div className="section_title">Education</div>
       {props.information.map((info: any, idx: number) => (
         <div className="item_container edu_item" key={idx}>
