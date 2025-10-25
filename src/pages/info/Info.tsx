@@ -6,10 +6,11 @@ import EducationInfo from "../../components/EducationInfo";
 import AboutInfo from "../../components/AboutInfo";
 import SectionTitle from "../../components/SectionTitle";
 import { ProjectListProps } from "../../components/types";
+import profilePhoto from "../../assests/images/19930107.jpg";
 
 const info_data = my_info[0];
 
-export const Info = ({ fontColor } : ProjectListProps) => {
+export const Info = ({ fontColor }: ProjectListProps) => {
   const { career, education, certifications } = info_data;
 
   return (
@@ -27,7 +28,9 @@ export const Info = ({ fontColor } : ProjectListProps) => {
             <PersonalInfo item="Mail" other={info_data.email} />
             <PersonalInfo item="Git" other={info_data.github} />
           </div>
-          <div className="image_content"></div>
+          <div className="image_content">
+            <img src={profilePhoto} alt="profile" className="profile_image" />
+          </div>
         </div>
       </div>
 
