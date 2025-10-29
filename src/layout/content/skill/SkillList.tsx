@@ -11,17 +11,33 @@ const SkillList = () => {
     setBeginner(skillData[1]?.Beginner ?? []);
     setIntermediate(skillData[1]?.Intermediate ?? []);
     setProficient(skillData[1]?.Proficient ?? []);
-
-    console.log(beginner);
-  }, [beginner]);
+  }, []);
 
   return (
-    <div>
-      <div className="skill_category">Beginner</div>
-      <div className="skill_item_wrapper">
-        {beginner.map((item: string, index: number) => {
-          return <div className="skill_item">{item}</div>;
-        })}
+    <div className="skillList_wrapper">
+      <div className="title_left_blue_bar ">
+        <div className="item_title">Beginner</div>
+        <div className="skill_item_wrapper">
+          {beginner.map((item: string, index: number) => {
+            return <div className="skill_item">{item}</div>;
+          })}
+        </div>
+      </div>
+      <div className="title_left_blue_bar ">
+        <div className="item_title">Intermediate</div>
+        <div className="skill_item_wrapper">
+          {intermediate.map((item: string, index: number) => {
+            return <div className="skill_item">{item}</div>;
+          })}
+        </div>
+      </div>
+      <div className="title_left_blue_bar ">
+        <div className="item_title">Proficient</div>
+        <div className="skill_item_wrapper">
+          {proficient.map((item: string, index: number) => {
+            return <div className="skill_item">{item}</div>;
+          })}
+        </div>
       </div>
     </div>
   );

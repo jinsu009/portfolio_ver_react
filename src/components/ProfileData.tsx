@@ -6,7 +6,7 @@ const ProfileData = (props: {
   engName?: string;
 }) => {
   return (
-    <div className="profile_wrapper">
+    <div className={"profile_wrapper title_left_blue_bar"}>
       <div className="item_title">{props.title}</div>
       <div className="item_content">
         {props.contentData}&nbsp;
