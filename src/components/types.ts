@@ -4,7 +4,7 @@ export interface ProjectListProps {
 
 export interface SectionTitleProps {
   title: string;
-  fontColor: string; // CSS 색상값은 보통 문자열(string)입니다.
+  fontColor?: string; // CSS 색상값은 보통 문자열(string)입니다.
 }
 
 // 경력 고유 속성: 실제 전달되는 career 배열의 요소와 일치해야 합니다.
@@ -29,3 +29,7 @@ export type CertificationItem = {
 export type AboutInfoProps =
   | { type: "career"; information: CareerItem }
   | { type: "certifications"; information: CertificationItem[] };
+
+export type SectionContentType = {
+  type: string;
+};

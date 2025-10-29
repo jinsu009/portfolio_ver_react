@@ -1,0 +1,19 @@
+.skill_category {
+  font-size: large;
+}
+.skill_item_wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.skill_item {
+  width: 55px;
+  min-height: 25px;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  margin: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
