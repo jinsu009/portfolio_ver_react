@@ -1,3 +1,33 @@
+@font-face {
+  font-family: "grandifloraOne";
+  /* 🚨 src/pages/home/Home.css에서 src/assests/fonts/ 로 가는 상대 경로를 사용합니다. */
+  src: url("./assests/fonts/Grandiflora_One/GrandifloraOne-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "jua";
+  /* 🚨 src/pages/home/Home.css에서 src/assests/fonts/ 로 가는 상대 경로를 사용합니다. */
+  src: url("./assests/fonts/Jua/Jua-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "hiMelody";
+  /* 🚨 src/pages/home/Home.css에서 src/assests/fonts/ 로 가는 상대 경로를 사용합니다. */
+  src: url("./assests/fonts/Hi_Melody/HiMelody-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poorStory";
+  /* 🚨 src/pages/home/Home.css에서 src/assests/fonts/ 로 가는 상대 경로를 사용합니다. */
+  src: url("./assests/fonts/Poor_Story/PoorStory-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /* 섹션 제목 스타일 통일 */
 .section_title {
   font-size: 24px;
@@ -6,6 +36,18 @@
   margin-bottom: 15px;
   padding-bottom: 5px;
   border-bottom: 2px solid #333;
+}
+.header_wrapper {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 상하 여백 추가하여 바다 위/아래 공간 확보 */
+  padding: 70px 20px;
+  margin: 0px 20px;
+  /* 바다 색상과 어울리게 테두리 색상 조정 */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .info_wrapper {

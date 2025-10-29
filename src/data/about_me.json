@@ -1,0 +1,36 @@
+{
+  "name": "임수진",
+  "eng_name": "Lim SuJin",
+  "birth": "1993.01.07",
+  "add": "서울시 영등포구",
+  "email": "dnqlthsus9@gmail.com",
+  "phone": "010-3628-0827",
+  "github": "https://github.com/jinsu009",
+  "blog": "https://dnqlthsus9.tistory.com",
+  "introduce": "협업을 통해 기술적 시너지를 창출하는 풀스택 지향 개발자",
+  "certifications": [
+    {
+      "name": "정보처리기사",
+      "date": "2009.05.22",
+      "serial_number": "19201131115S",
+      "issuer": "한국산업인력공단"
+    }
+  ],
+  "education": [
+    {
+      "school": "충남대학교",
+      "major": "정보통신공학과",
+      "degree": "학사",
+      "status": "졸업",
+      "period": "2011.03 ~ 2017.02",
+      "location": "대전시 유성구 궁동 220"
+    },
+    {
+      "school": "계룡고등학교",
+      "major": "인문",
+      "status": "졸업",
+      "period": "2008.03 ~ 2011.02"
+    }
+  ],
+  "vision": "팀의 일원으로서 다양한 개발 방법론과 성공 사례들을 적극적으로 경험하고 학습하며 성장하겠습니다. 끊임없는 협업을 통해 기술적 시너지를 창출하고, 저의 발자취를 곧 서비스의 가치 있는 개발 결과물로 남기겠습니다."
+}

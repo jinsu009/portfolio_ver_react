@@ -1,0 +1,84 @@
+/* Mobile : Default */
+
+.main_container {
+  background-color: yellowgreen;
+  display: flex;
+  flex-direction: column;
+  /* 뷰포트 전체 너비/높이 확보 */
+  width: 100vw;
+  min-height: 100vh; /* 내용이 적더라도 최소한 화면 높이를 채우도록 */
+}
+
+.about_me_container {
+  background-color: #78c5dc;
+}
+.skill_container {
+  background-color: #97dee7;
+}
+.career_container {
+  background-color: #b7ecea;
+}
+.preview_project {
+  background-color: #d8f4ef;
+}
+
+.section_title {
+  padding: 0 0 0 15px;
+  /* 기존 스타일 유지 */
+  font-size: 1.3em;
+  font-weight: 700;
+  /* color: #81d4fa; */
+  /* text-shadow: 0 0 10px rgba(129, 212, 250, 0.5); */
+  /* 🚨 타이틀과 콘텐츠를 분리하는 언더라인 */
+  border-bottom: 2px solid rgb(16, 123, 173); /* 연한 바다색 경계선 */
+}
+
+.section_content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+.my_photo {
+  display: none;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .my_photo {
+    display: block;
+    width: 180px;
+    height: 225px;
+  }
+  .section_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 900px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .my_photo {
+    height: auto;
+  }
+  .section_content {
+    align-items: stretch;
+    max-width: 1200px;
+  }
+  .section_content > div:first-child {
+    width: 65%;
+    margin-right: 30px;
+  }
+  .my_photo {
+    width: 30%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+  }
+}
+
+/* Large Monitor */
+@media (min-width: 1440px) {
+}

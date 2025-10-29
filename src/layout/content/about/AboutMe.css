@@ -1,0 +1,56 @@
+.about_container {
+  display: flex;
+  flex-direction: column;
+
+  /* 아이템들이 다음 줄로 넘어갈 수 있도록 랩핑 설정 */
+  flex-wrap: wrap; /* flex-direction: row로 전환될 때 작동 */
+
+  width: 100%;
+  margin: 0;
+}
+
+.profile_wrapper {
+  /* 모바일에서는 100% 너비 */
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  border-left: 3px solid blue;
+  margin-bottom: 10px;
+  padding-left: 10px;
+
+  overflow-y: scroll;
+}
+
+.item_title {
+  font-weight: bold;
+}
+
+/* 태블릿 및 데스크톱 (768px 이상) */
+@media (min-width: 768px) {
+  .about_container {
+    /* 배치 방향을 가로로 변경하여 flex-wrap이 작동하게 함 */
+    flex-direction: row;
+    /* 항목들 사이의 가로 간격을 벌려줍니다. */
+    justify-content: space-between;
+  }
+
+  .profile_wrapper {
+    /* 한 줄에 2개씩 배치되도록 너비를 48% 정도로 설정 */
+    /* justify-content: space-between과 함께 사용하면 깔끔하게 2열 배치 */
+    width: 48%;
+    /* 두 항목 사이의 세로 마진은 유지 */
+    margin-bottom: 20px;
+  }
+}
+
+/* Large Monitor */
+@media (min-width: 1024px) {
+  .profile_wrapper {
+    width: calc((100% - 60px) / 2);
+  }
+}
+
+/* Large Monitor */
+@media (min-width: 1440px) {
+}
