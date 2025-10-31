@@ -19,7 +19,11 @@ const SkillList = () => {
         <div className="item_title">Beginner</div>
         <div className="skill_item_wrapper">
           {beginner.map((item: string, index: number) => {
-            return <div className="skill_item">{item}</div>;
+            return (
+              <div className="skill_item" key={index}>
+                {item}
+              </div>
+            );
           })}
         </div>
       </div>
@@ -27,7 +31,11 @@ const SkillList = () => {
         <div className="item_title">Intermediate</div>
         <div className="skill_item_wrapper">
           {intermediate.map((item: string, index: number) => {
-            return <div className="skill_item">{item}</div>;
+            return (
+              <div className="skill_item" key={index}>
+                {item}
+              </div>
+            );
           })}
         </div>
       </div>
@@ -35,7 +43,11 @@ const SkillList = () => {
         <div className="item_title">Proficient</div>
         <div className="skill_item_wrapper">
           {proficient.map((item: string, index: number) => {
-            return <div className="skill_item">{item}</div>;
+            return (
+              <div className="skill_item" key={index}>
+                {item}
+              </div>
+            );
           })}
         </div>
       </div>

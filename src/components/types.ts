@@ -33,3 +33,27 @@ export type AboutInfoProps =
 export type SectionContentType = {
   type: string;
 };
+
+export type ProjectArrayProps = {
+  project_name: string;
+  start_date: string;
+  end_date: string;
+  period: string;
+  stack: string[];
+  tools: string[];
+  position: string[];
+  content: string[];
+  work_history: string[];
+  result: string[];
+};
+
+export type CareerProjectProps = {
+  company: string;
+  start_date: string;
+  end_date: string;
+  period: string;
+  department: string;
+  position: string;
+  projects: ProjectArrayProps[];
+  reason_for_job_change: string;
+};

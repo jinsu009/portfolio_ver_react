@@ -1,5 +1,5 @@
 .project_wrpper {
-  border: 1px solid red;
+  border: 1px solid black;
   border-radius: 5px;
 
   height: 300px;
@@ -28,21 +28,19 @@
 }
 
 .project_col {
-  background-color: cadetblue;
-
   width: 100%;
-  min-width: 90vw;
-  flex-shrink: 0; /* 컨테이너가 좁아져도 절대 줄어들지 않도록 설정 */
-  margin: 10px;
+  min-width: 100%;
+
+  margin: 0px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  flex-shrink: 0; /* 컨테이너가 좁아져도 절대 줄어들지 않도록 설정 */
 }
 
 .project_row {
   width: 100%;
-  background-color: chocolate;
   padding: 5px;
 
   display: flex;
@@ -53,7 +51,6 @@
 .project_row > h2 {
   width: 100px;
   min-width: 100px;
-  background-color: chartreuse;
 
   white-space: nowrap;
   overflow: hidden;
@@ -62,8 +59,6 @@
 }
 
 .project_row > p {
-  background-color: pink;
-
   /* 
     flex-grow 를 사용하여 유연하게 공간을 채움, 
     min-width와 함께 사용하여 내용이 길어도 줄어들 수 있는 최소값 설정 
