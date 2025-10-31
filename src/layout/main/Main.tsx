@@ -18,11 +18,13 @@ const Main = () => {
       </div>
       {/* skill_container end */}
       <div className="career_container">
-        <h2>Career Container</h2>
+        <SectionTitle title="Career & Education" />
+        <SectionContent type={"career"} />
       </div>
       {/* career_container end */}
       <div className="preview_project">
-        <h2>Preview Project</h2>
+        <SectionTitle title="Project Preview" />
+        <SectionContent type={"project"} />
       </div>
       {/* preview_project end */}
     </div>

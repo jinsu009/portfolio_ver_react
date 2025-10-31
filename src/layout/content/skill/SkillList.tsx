@@ -14,7 +14,7 @@ const SkillList = () => {
   }, []);
 
   return (
-    <div className="skillList_wrapper">
+    <div className="list_wrapper">
       <div className="title_left_blue_bar ">
         <div className="item_title">Beginner</div>
         <div className="skill_item_wrapper">

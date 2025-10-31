@@ -3,6 +3,8 @@ import myPhoto from "../assests/images/19930107.jpg";
 import { SectionContentType } from "./types";
 import AboutMe from "../layout/content/about/AboutMe";
 import SkillList from "../layout/content/skill/SkillList";
+import CareerList from "../layout/content/career/CareerList";
+import ProjectList from "../layout/content/project/ProjectList";
 
 const SectionContent = (props: SectionContentType) => {
   return (
@@ -16,6 +18,16 @@ const SectionContent = (props: SectionContentType) => {
       {props.type === "skill" && (
         <>
           <SkillList />
+        </>
+      )}
+      {props.type === "career" && (
+        <>
+          <CareerList />
+        </>
+      )}
+      {props.type === "project" && (
+        <>
+          <ProjectList />
         </>
       )}
     </div>
