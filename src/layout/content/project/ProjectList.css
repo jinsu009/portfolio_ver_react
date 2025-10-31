@@ -45,10 +45,11 @@
 
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.project_row > h2 {
+.row_title {
   width: 100px;
   min-width: 100px;
 
@@ -58,7 +59,7 @@
   flex-shrink: 0;
 }
 
-.project_row > p {
+.row_content {
   /* 
     flex-grow 를 사용하여 유연하게 공간을 채움, 
     min-width와 함께 사용하여 내용이 길어도 줄어들 수 있는 최소값 설정 
@@ -69,8 +70,12 @@
     줄 바꿈을 허용하여 내용이 넘처 흐르지 않게 한다. 
     줄 바꿈을 명시적으로 혀용
   */
+  /*
+    word-break: break-word;
+  */
+
+  width: auto;
   word-break: break-word;
-  padding-left: 10px;
 }
 
 .arrow {
@@ -80,4 +85,10 @@
   margin: 0 10px;
   width: 50px;
   height: 50px;
+}
+
+.read_more_icon {
+  width: 35px;
+  height: 35px;
+  margin: 0 5px;
 }

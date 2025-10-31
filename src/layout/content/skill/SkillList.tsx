@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./SkillList.css";
 import skillData from "../../../data/skills.json";
+import SkillGroups from "../../../components/SkillGroups";
 
 const SkillList = () => {
   const [beginner, setBeginner] = useState<string[]>([]);
@@ -15,42 +16,9 @@ const SkillList = () => {
 
   return (
     <div className="list_wrapper">
-      <div className="title_left_blue_bar ">
-        <div className="item_title">Beginner</div>
-        <div className="skill_item_wrapper">
-          {beginner.map((item: string, index: number) => {
-            return (
-              <div className="skill_item" key={index}>
-                {item}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <div className="title_left_blue_bar ">
-        <div className="item_title">Intermediate</div>
-        <div className="skill_item_wrapper">
-          {intermediate.map((item: string, index: number) => {
-            return (
-              <div className="skill_item" key={index}>
-                {item}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <div className="title_left_blue_bar ">
-        <div className="item_title">Proficient</div>
-        <div className="skill_item_wrapper">
-          {proficient.map((item: string, index: number) => {
-            return (
-              <div className="skill_item" key={index}>
-                {item}
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      <SkillGroups title="Beginner" skills={beginner} />
+      <SkillGroups title="Intermediate" skills={intermediate} />
+      <SkillGroups title="Proficient" skills={proficient} />
     </div>
   );
 };

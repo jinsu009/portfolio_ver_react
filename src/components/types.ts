@@ -35,6 +35,7 @@ export type SectionContentType = {
 };
 
 export type ProjectArrayProps = {
+  project_code: string;
   project_name: string;
   start_date: string;
   end_date: string;

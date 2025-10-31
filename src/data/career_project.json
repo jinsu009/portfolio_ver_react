@@ -7,6 +7,7 @@
   "position": "웹 개발자",
   "projects": [
     {
+      "project_code": "PJT202207-001",
       "project_name": "제품 개발 - TACHYON Total Security",
       "start_date": "2022.07",
       "end_date": "2024.12",
@@ -52,6 +53,7 @@
       ]
     },
     {
+      "project_code": "PJT202103-001",
       "project_name": "제품 개발 - TACHYON Linux Security",
       "start_date": "2021.03",
       "end_date": "2022.07",

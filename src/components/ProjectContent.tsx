@@ -1,13 +1,34 @@
 import React from "react";
 import { ProjectArrayProps } from "./types";
+import readMore from "../assests/icons/read_more_sq.svg";
+import { Link, useNavigate } from "react-router-dom";
 
 const ProjectContent = ({ data }: { data: ProjectArrayProps }) => {
+  const navigate = useNavigate();
+
+  const moveProjectPage = () => {
+    // 상세 페이지로 이동하는 로직 구현
+    console.log(`Move to detail page of project: ${data.project_name}`);
+    navigate("/project/projectdetail");
+  };
   return (
     <>
       <div className="project_col">
         <div className="project_row">
-          <h2>project_name</h2>
-          <p>{data.project_name}</p>
+          <p className="row_title">project_name</p>
+          <p className="row_content">{data.project_name}</p>
+          <img
+            src={readMore}
+            alt="더보기"
+            className="read_more_icon"
+            onClick={() => moveProjectPage()}
+          />
+        </div>
+        <div className="project_row">
+          <p className="row_title">project_period</p>
+          <p className="row_content">
+            {data.start_date} ~ {data.end_date}
+          </p>
         </div>
       </div>
     </>
