@@ -1,6 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## 주요 기능 
 - 반응형 디자인
@@ -61,6 +58,9 @@ npm run start
      레이아웃의 최대너비를 조정하여 넓은 화면에서도 콘텐츠가 중앙에 정렬되도록 하였습니다.
 
 --------
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
 ## Available Scripts
