@@ -21,8 +21,29 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## 프로젝트 구조 
 
-/src ├── components/ # 재사용 가능한 UI 컴포넌트 │ ├── SectionTitle.tsx # 섹션 제목 컴포넌트 │ └── EducationInfo.tsx# 학력 정보 리스트 컴포넌트 ├── data/ # JSON 데이터 관리 폴더 (정적 데이터) │ ├── about_me.json # 개인 정보 및 학력 정보 │ └── career_project.json # 경력 및 프로젝트 상세 정보 ├── layout/ # 페이지 레이아웃 (Home, Main) │ ├── content/ # 실제 콘텐츠 (AboutMe, SkillList 등) │ └── Home.tsx # 메인 페이지 구성 ├── pages/ # 최상위 라우팅 페이지 │ ├── Main.tsx # 라우터 및 헤더 포함 (전체 레이아웃) │ └── DetailProject.tsx# 프로젝트 상세 페이지 └── App.tsx # 최상위 컴포넌트
 
+## Getting Started
+```
+git clone https://github.com/jinsu009/portfolio_ver_react.git
+cd portfolio_ver_react
+npm install
+# 또는 yarn install
+npm run start
+# 또는 yarn start
+```
+
+## 주요 구현 기능 상세 
+1. 동적 데이터 관리
+   - data 폴더의 JSON 파일에 정의한 내용을 기반으로 진행하였습니다.
+   - JSON 데이터를 수정하는 것만으로 웹사이트의 내용을 쉽게 업데이트 할 수 있습니다.
+  
+2. 반응형 슬라이더 구현
+   - css Grid나 Flexbox 대신 React Statue와 Transform 속성을 활용하여 캐러셀을 직접 구현했습니다.
+   - 프로젝트 개수에 따라 슬라이더의 width를 동적으로 계산하여 유연성을 확보했습니다.
+
+3. 일관된 UI/UX 테마
+   - SectionTitle component를 통해 모든 섹션 제목의 스타일을 통일하고, 
+     레이아웃의 최대너비를 조정하여 넓은 화면에서도 콘텐츠가 중앙에 정렬되도록 하였습니다.
 
 --------
 
