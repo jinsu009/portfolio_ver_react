@@ -2,6 +2,41 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## 주요 기능 
+- 반응형 디자인
+- React Router를 활용한 페이지 전환
+- 동적 슬라이더 UI 구현
+- JSON 기반 데이터 관리
+
+  ## 기술 스택
+  ### Frontend
+    - React : 컴포넌트 기반 UI 개발 및 상태 관리를 위한 핵심 라이브러리
+    - TypeScript : 정적 타입 검사를 통한 코드 안정성 확보
+    - React Router : SPA 환경에서 페이지 라우팅 및 URL관리
+    - CSS/SCSS(Style-Components) : 모듈화된 스타일링 및 테마시스템 구축
+ 
+  ### Tools & Deployment
+    - Git/Github : 버전 관리
+    - VS Code : 주요 개발환
+
+## 프로젝트 구조 
+/src
+├── components/          # 재사용 가능한 UI 컴포넌트
+│   ├── SectionTitle.tsx # 섹션 제목 컴포넌트
+│   └── EducationInfo.tsx# 학력 정보 리스트 컴포넌트
+├── data/                # JSON 데이터 관리 폴더 (정적 데이터)
+│   ├── about_me.json    # 개인 정보 및 학력 정보
+│   └── career_project.json # 경력 및 프로젝트 상세 정보
+├── layout/              # 페이지 레이아웃 (Home, Main)
+│   ├── content/         # 실제 콘텐츠 (AboutMe, SkillList 등)
+│   └── Home.tsx         # 메인 페이지 구성
+├── pages/               # 최상위 라우팅 페이지
+│   ├── Main.tsx         # 라우터 및 헤더 포함 (전체 레이아웃)
+│   └── DetailProject.tsx# 프로젝트 상세 페이지
+└── App.tsx              # 최상위 컴포넌트
+--------
+
+
 ## Available Scripts
 
 In the project directory, you can run:
