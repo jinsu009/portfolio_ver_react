@@ -1,7 +1,7 @@
 import React from "react";
 import { ProjectArrayProps } from "./types";
 import readMore from "../assests/icons/read_more_sq.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ProjectContent = ({ data }: { data: ProjectArrayProps }) => {
   const navigate = useNavigate();

@@ -31,6 +31,7 @@
   /* text-shadow: 0 0 10px rgba(129, 212, 250, 0.5); */
   /* 🚨 타이틀과 콘텐츠를 분리하는 언더라인 */
   border-bottom: 2px solid rgb(16, 123, 173); /* 연한 바다색 경계선 */
+  margin-bottom: 10px;
 }
 
 .section_content {

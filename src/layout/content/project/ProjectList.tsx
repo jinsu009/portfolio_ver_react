@@ -46,7 +46,7 @@ const ProjectList = () => {
     }
   };
   return (
-    <div className="project_wrpper">
+    <div className="project_wrapper">
       <img
         src={before}
         alt="next"

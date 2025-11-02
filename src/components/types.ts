@@ -49,11 +49,6 @@ export type CareerProjectProps = {
   reason_for_job_change: string;
 };
 
-// AboutInfoProps 정의: type에 따라 information 타입을 분기
-export type AboutInfoProps =
-  | { type: "career"; information: CareerProjectProps }
-  | { type: "certifications"; information: CertificationItem[] };
-
 export type SectionContentType = {
   type: string;
 };
