@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { CareerItem, CertificationItem, AboutInfoProps } from "./types";
+import { CareerProjectProps, CertificationItem, AboutInfoProps } from "./types";
 
 const AboutInfo = (props: AboutInfoProps) => {
   const [sectionTitle, setSectionTitle] = React.useState("");
@@ -16,7 +16,7 @@ const AboutInfo = (props: AboutInfoProps) => {
 
   // information을 항상 배열 형태로 정규화합니다.
   const itemsToRender = isCareer
-    ? [props.information as CareerItem] // Career 객체를 배열로 감쌈
+    ? [props.information as CareerProjectProps] // Career 객체를 배열로 감쌈
     : (props.information as CertificationItem[]); // Certifications 배열 그대로 사용
 
   return (
@@ -33,9 +33,9 @@ const AboutInfo = (props: AboutInfoProps) => {
           // 타입 좁히기(Type Narrowing)를 활용하여 각 속성에 접근
           if (props.type === "career") {
             // data가 CareerItem 타입임을 가정하고 접근
-            const careerData = data as CareerItem;
+            const careerData = data as CareerProjectProps;
             itemName = careerData.company; // 회사 이름
-            itemPeriod = careerData.tenure; // 재직 기간
+            itemPeriod = careerData.period; // 재직 기간
             itemDetail = `부서/직책: ${careerData.department} / ${careerData.position}`;
           } else {
             // data가 CertificationItem 타입임을 가정하고 접근

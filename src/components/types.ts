@@ -7,15 +7,14 @@ export interface SectionTitleProps {
   fontColor?: string; // CSS 색상값은 보통 문자열(string)입니다.
 }
 
-// 경력 고유 속성: 실제 전달되는 career 배열의 요소와 일치해야 합니다.
-export type CareerItem = {
-  company: string;
-  tenure: string;
-  department: string;
-  position: string;
-  projects?: any[] | undefined; // projects의 상세 타입도 정의하는 것이 좋습니다.
-  이직사유: string;
-};
+export interface EducationItem {
+  school: string;
+  major: string;
+  status: string;
+  period: string;
+  degree?: string;
+  location?: string; // location은 필수가 아닐 수 있으므로 ?를 붙입니다.
+}
 
 // 자격증 고유 속성: 실제 certifications 배열의 요소와 일치해야 합니다.
 export type CertificationItem = {
@@ -23,15 +22,6 @@ export type CertificationItem = {
   date: string;
   serial_number: string;
   issuer: string;
-};
-
-// AboutInfoProps 정의: type에 따라 information 타입을 분기
-export type AboutInfoProps =
-  | { type: "career"; information: CareerItem }
-  | { type: "certifications"; information: CertificationItem[] };
-
-export type SectionContentType = {
-  type: string;
 };
 
 export type ProjectArrayProps = {
@@ -57,4 +47,13 @@ export type CareerProjectProps = {
   position: string;
   projects: ProjectArrayProps[];
   reason_for_job_change: string;
+};
+
+// AboutInfoProps 정의: type에 따라 information 타입을 분기
+export type AboutInfoProps =
+  | { type: "career"; information: CareerProjectProps }
+  | { type: "certifications"; information: CertificationItem[] };
+
+export type SectionContentType = {
+  type: string;
 };
