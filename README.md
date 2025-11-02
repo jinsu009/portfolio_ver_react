@@ -20,20 +20,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     - VS Code : 주요 개발환
 
 ## 프로젝트 구조 
-/src
-├── components/          # 재사용 가능한 UI 컴포넌트
-│   ├── SectionTitle.tsx # 섹션 제목 컴포넌트
-│   └── EducationInfo.tsx# 학력 정보 리스트 컴포넌트
-├── data/                # JSON 데이터 관리 폴더 (정적 데이터)
-│   ├── about_me.json    # 개인 정보 및 학력 정보
-│   └── career_project.json # 경력 및 프로젝트 상세 정보
-├── layout/              # 페이지 레이아웃 (Home, Main)
-│   ├── content/         # 실제 콘텐츠 (AboutMe, SkillList 등)
-│   └── Home.tsx         # 메인 페이지 구성
-├── pages/               # 최상위 라우팅 페이지
-│   ├── Main.tsx         # 라우터 및 헤더 포함 (전체 레이아웃)
-│   └── DetailProject.tsx# 프로젝트 상세 페이지
-└── App.tsx              # 최상위 컴포넌트
+<img width="730" height="341" alt="image" src="https://github.com/user-attachments/assets/c9dbb6a0-41b6-4108-b90a-76cd51b1f477" />
+
+
+
 --------
 
 
