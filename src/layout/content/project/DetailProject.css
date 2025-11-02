@@ -1,0 +1,65 @@
+.detail_project_container {
+  background-color: #e0f2f7;
+  border: 2px solid #5ab9c3;
+  border-radius: 10px;
+
+  padding: 20px;
+  margin: 20px;
+
+  display: flex;
+  flex-direction: column;
+  /* 각 row 사이 간격 */
+  gap: 15px;
+}
+
+.detail_container_row {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #c0e0e9;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.detail_container_col {
+  padding: 12px 15px;
+  /* 나머지 공간을 채우도록 설정 */
+  flex-grow: 1;
+  /* 내용이 길 경우 줄어들도록 허용 */
+  min-width: 0;
+}
+
+.detail_container_title {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #78c5dc;
+  color: white;
+  text-align: center;
+  /* 🚨 수정: flex-basis와 flex-grow, flex-shrink를 이용해 너비를 130px로 완전히 고정 */
+  flex-basis: 130px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.detail_container_content {
+  background-color: white;
+  /* 내용이 길 때 단어 단위로 줄 바꿈 */
+  word-break: break-word;
+}
+
+.skill_tag_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 5px 0;
+}
+
+.skill_tag {
+  background-color: #97dee7;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  white-space: nowrap;
+}

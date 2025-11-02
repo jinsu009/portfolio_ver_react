@@ -7,9 +7,10 @@ const ProjectContent = ({ data }: { data: ProjectArrayProps }) => {
   const navigate = useNavigate();
 
   const moveProjectPage = () => {
+    const projectID = data.project_code.replace(/\s+/g, "-");
     // 상세 페이지로 이동하는 로직 구현
     console.log(`Move to detail page of project: ${data.project_name}`);
-    navigate("/project/projectdetail");
+    navigate(`/project/projectdetail/${projectID}`);
   };
   return (
     <>
