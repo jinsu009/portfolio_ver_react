@@ -3,7 +3,8 @@
   border-radius: 5px;
 
   height: 300px;
-  width: 90vw;
+  /* width: 90vw; */
+  width: 90%;
   padding: 5px;
 
   display: flex;
@@ -15,14 +16,16 @@
 .project_slider_container {
   flex-grow: 1; /* 남은 공간 모두 차지 */
   overflow: hidden /* 영역밖은 숨김 */;
-  width: 100%;
+  /* width: 100%; */
+  width: auto;
   height: 100%;
 }
 
 .project_slider {
   display: flex;
   flex-direction: row;
-  width: fit-content; /* 내부 프로젝트 크기만큼 너비가 늘어나도록 설정 */
+  /* 내부 프로젝트 크기만큼 너비가 늘어나도록 설정 */
+  /* width: fit-content;  */
   height: 100%;
   transition: transform 0.3s ease-in-out;
 }
@@ -46,7 +49,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .row_title {
@@ -87,8 +90,24 @@
   height: 50px;
 }
 
-.read_more_icon {
-  width: 35px;
-  height: 35px;
-  margin: 0 5px;
+@media (max-width: 768px) {
+  .project_wrapper {
+    width: 95vw; /* 좁은 화면에서 조금 더 공간을 확보 */
+  }
+
+  /* 좁은 화면에서 화살표 크기 및 마진 축소 */
+  .arrow {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px; /* 마진 축소 */
+  }
+}
+
+@media (max-width: 576px) {
+  /* 더 좁은 화면에서 상세 보기 아이콘 크기 축소 */
+  .read_more_icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 3px;
+  }
 }

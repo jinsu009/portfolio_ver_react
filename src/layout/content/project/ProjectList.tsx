@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import "./ProjectList.css";
 import next from "../../../assests/icons/next.svg";
 import before from "../../../assests/icons/before.svg";
-import ProjectContent from "../../../components/ProjectContent";
+import ProjectContent from "./ProjectContent";
 import projectData from "../../../data/career_project.json";
 
 const ProjectList = () => {
@@ -55,7 +55,6 @@ const ProjectList = () => {
       />
       <div className="project_slider_container">
         <div className="project_slider" ref={sliderRef}>
-          {/* 🚨 3. 데이터 배열을 map으로 돌려 프로젝트 항목들을 동적으로 생성 */}
           {projectData.projects.map((project, index) => (
             <ProjectContent key={index} data={project} />
           ))}

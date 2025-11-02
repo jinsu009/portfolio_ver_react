@@ -1,6 +1,5 @@
 @font-face {
   font-family: "grandifloraOne";
-  /* 🚨 src/pages/home/Home.css에서 src/assests/fonts/ 로 가는 상대 경로를 사용합니다. */
   src: url("./assests/fonts/Grandiflora_One/GrandifloraOne-Regular.ttf")
     format("truetype");
   font-weight: normal;
@@ -8,21 +7,18 @@
 }
 @font-face {
   font-family: "jua";
-  /* 🚨 src/pages/home/Home.css에서 src/assests/fonts/ 로 가는 상대 경로를 사용합니다. */
   src: url("./assests/fonts/Jua/Jua-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "hiMelody";
-  /* 🚨 src/pages/home/Home.css에서 src/assests/fonts/ 로 가는 상대 경로를 사용합니다. */
   src: url("./assests/fonts/Hi_Melody/HiMelody-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "poorStory";
-  /* 🚨 src/pages/home/Home.css에서 src/assests/fonts/ 로 가는 상대 경로를 사용합니다. */
   src: url("./assests/fonts/Poor_Story/PoorStory-Regular.ttf")
     format("truetype");
   font-weight: normal;

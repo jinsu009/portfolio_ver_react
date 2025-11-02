@@ -36,7 +36,6 @@
   background-color: #78c5dc;
   color: white;
   text-align: center;
-  /* 🚨 수정: flex-basis와 flex-grow, flex-shrink를 이용해 너비를 130px로 완전히 고정 */
   flex-basis: 130px;
   flex-grow: 0;
   flex-shrink: 0;

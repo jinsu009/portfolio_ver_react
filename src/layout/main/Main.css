@@ -1,12 +1,29 @@
 /* Mobile : Default */
 
 .main_container {
-  background-color: yellowgreen;
+  background-color: #f0f8ff;
   display: flex;
   flex-direction: column;
   /* 뷰포트 전체 너비/높이 확보 */
-  width: 100vw;
+  /* width: 100vw; */
   min-height: 100vh; /* 내용이 적더라도 최소한 화면 높이를 채우도록 */
+}
+.header_wrapper {
+  /* 헤더 배경색: 주 컨셉색(중간 바다색)보다 약간 진한 색 사용 */
+  background-color: #78c5dc;
+  color: white; /* 텍스트 색상을 흰색으로 */
+  padding: 15px 5vw; /* 좌우 패딩을 뷰포트 너비에 맞게 조절 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 미세한 그림자 추가 */
+  flex-shrink: 0; /* 내용이 많아져도 헤더는 줄어들지 않도록 */
+}
+
+.main_title {
+  font-size: 2em; /* 타이틀 크기 증가 */
+  font-weight: 600;
+  margin: 0;
+  cursor: pointer; /* 클릭 가능한 요소임을 표시 */
+  /* 전문성을 높이기 위해 폰트 계열 조정 (실제 적용은 폰트 임포트 필요) */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .about_me_container {
@@ -23,13 +40,11 @@
 }
 
 .section_title {
-  padding: 0 0 0 15px;
-  /* 기존 스타일 유지 */
+  padding: 0px;
   font-size: 1.3em;
   font-weight: 700;
   /* color: #81d4fa; */
   /* text-shadow: 0 0 10px rgba(129, 212, 250, 0.5); */
-  /* 🚨 타이틀과 콘텐츠를 분리하는 언더라인 */
   border-bottom: 2px solid rgb(16, 123, 173); /* 연한 바다색 경계선 */
   margin-bottom: 10px;
 }
@@ -39,7 +54,10 @@
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+
+  padding: 0 5vw;
 }
+
 .my_photo {
   display: none;
 }
@@ -51,11 +69,14 @@
     width: 180px;
     height: 225px;
   }
-  .section_content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .section_title {
     max-width: 900px;
+    margin: 0 auto 10px auto; /* 중앙 정렬 */
+    padding: 0 15px; /* 좌우 패딩을 줘서 내용과 정렬 */
+  }
+  .section_content {
+    padding: 0;
+    max-width: 900px; /* 제목과 동일하게 설정 */
   }
 }
 
@@ -64,18 +85,24 @@
   .my_photo {
     height: auto;
   }
+  .section_title {
+    max-width: 1200px;
+    /* max-width와 margin: auto로 중앙 정렬. 
+    만약 좌우에 간격이 필요하면 padding을 유지 */
+    padding: 0 0;
+  }
+
   .section_content {
     align-items: stretch;
     max-width: 1200px;
   }
-  .section_content > div:first-child {
-    margin-right: 30px;
-  }
+
   .my_photo {
     width: 30%;
     max-width: 300px;
     height: auto;
     display: block;
+    margin-bottom: 10px;
   }
 }
 

@@ -8,15 +8,16 @@ const Main = () => {
   const navigate = useNavigate();
   return (
     <div className="main_container">
-      <div>
-        <h2
+      <header className="header_wrapper">
+        <h1
+          className="main_title"
           onClick={() => {
             navigate(`/`);
           }}
         >
-          Jin profile
-        </h2>
-      </div>
+          SuJin's Web Developer Portfolio
+        </h1>
+      </header>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/project/projectdetail/:id" element={<DetailProject />} />
