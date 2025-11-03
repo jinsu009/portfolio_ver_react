@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/portfolio_ver_react/static/css/main.4a9a9d91.css",
+    "main.js": "/portfolio_ver_react/static/js/main.c879ccbf.js",
+    "static/js/453.85e550fe.chunk.js": "/portfolio_ver_react/static/js/453.85e550fe.chunk.js",
+    "static/media/HiMelody-Regular.ttf": "/portfolio_ver_react/static/media/HiMelody-Regular.984636f1dce3ac1821f6.ttf",
+    "static/media/PoorStory-Regular.ttf": "/portfolio_ver_react/static/media/PoorStory-Regular.bec8ef9a74351552c94e.ttf",
+    "static/media/GrandifloraOne-Regular.ttf": "/portfolio_ver_react/static/media/GrandifloraOne-Regular.f97561ac0d1af0410867.ttf",
+    "static/media/Jua-Regular.ttf": "/portfolio_ver_react/static/media/Jua-Regular.03f46d33c377b251ab15.ttf",
+    "static/media/19930107.jpg": "/portfolio_ver_react/static/media/19930107.a5578c3d3da91fbd0cc5.jpg",
+    "static/media/read_more_sq.svg": "/portfolio_ver_react/static/media/read_more_sq.ddc9a507700da4bfeabbfaaea688f6c2.svg",
+    "static/media/next.svg": "/portfolio_ver_react/static/media/next.1017c5ac7bab9f9bfa0ecc493147e1f3.svg",
+    "static/media/before.svg": "/portfolio_ver_react/static/media/before.5222b210d4ef1627e11ea90956847c97.svg",
+    "index.html": "/portfolio_ver_react/index.html",
+    "main.4a9a9d91.css.map": "/portfolio_ver_react/static/css/main.4a9a9d91.css.map",
+    "main.c879ccbf.js.map": "/portfolio_ver_react/static/js/main.c879ccbf.js.map",
+    "453.85e550fe.chunk.js.map": "/portfolio_ver_react/static/js/453.85e550fe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a9a9d91.css",
+    "static/js/main.c879ccbf.js"
+  ]
+}
